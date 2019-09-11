@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.manner,.main,.footer {
+				width: 900px;
+				margin: 0 auto;
+				
+				}
+				.top{
+					height:20px;
+					border: 1px solid #000000;
+					background-color: #f00;
+				}
+				.top-inner{
+					width: 900px;
+					height:20px;
+					margin: 0 auto;
+					background-color: #472;
+				}
+				.banner{
+					height:50px;
+					border: 1px solid #000000;
+					margin:5px auto; /* 上下块之间间隔为5px,auto表示左右的外边距自由分配 */
+
+				}
+				.banner li { /* manner里的li */
+					width:217px;
+					height:50px;
+					float: left;
+					margin-right:10px;
+				}	
+				.one{
+					background-color: #999;
+				}
+				.two{
+					background-color: #122145;
+				}
+				.three{
+					background-color: #789;
+				}
+				.banner .four{     /* 这里若只写.four优先级没有.manner li高,就没法使右边外边距为0 */
+					background-color: #456;
+				     margin-right: 0;
+					 float:right;
+				}
+				.main{
+					height:500px;
+					background-color: skyblue;
+					
+				}
+				.main .left{
+					width:298px;
+					height:500px;
+					line-height:500px;
+					text-align: center;
+					float:left; /* 浮动之后靠左,靠着父元素main给定的范围靠左 */
+					background-color: purple; 
+					border: 1px solid #000000;  /* 左右各1px,若没有修改宽度,则main父元素装不下 */
+				
+				}
+				.main .right{
+					width:588px;
+					height:500px;
+				    line-height:500px;
+					text-align: center;
+					background-color: greenyellow;
+					float:right; /* 浮动之后靠右,靠着父元素main给定的范围靠右 */
+					border: 1px solid #000000; /* 左右各1px,若没有修改宽度,则main父元素装不下 */
+					}
+				.footer{
+					height:20px;
+					line-height:20px;
+					margin:5px auto 0; /* 上方块间隔为5px,auto表示左右的外边距自由分配，下方块间隔0px */
+				    background-color: #00f;
+					border: 1px solid #000000;
+					
+				}
+		</style>
+	</head>
+	<body>
+		<div class="top"><div class="top-inner"></div></div>
+		<div class="banner"><ul>
+			<li class="one">1</li>
+			<li class="two">2</li>
+			<li class="three">3</li>
+			<li class="four">4</li>
+		</ul></div>
+		<div class="main">
+			<div class="left">left</div>
+			<div class="right">right</div>
+		</div>
+		<div class="footer"></div>
+	</body>
+</html>
