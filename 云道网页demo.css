@@ -1,0 +1,72 @@
+/* 删除默认的内外边距 */
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	background-color: #fafafa;
+}
+li{
+	list-style: none;  /* 消除li的小点 */
+}
+/* 顶部导航栏 */
+.top{
+	height: 100px;
+	background-color: #FFFFFF;
+}
+.inner-top{
+	width: 1200px;
+	height:100px;
+	background-color: #fff;
+	margin: 0 auto; /* 版心居中对齐,上下0,左右auto */
+	line-height: 100px; /* 可以写在li里,但父元素有继承,所以写在父元素好 */
+}
+/* 因为logo写在inner-top里,所以左浮动范围在父元素inner-top内 */
+.logo{   
+	float:left;
+}
+/* 因为nav写在inner-top里,所以右浮动范围在父元素inner-top内 */
+.nav{
+	float: right;
+}
+.nav li{
+	float: left;  /* 若浮动right则li会颠倒顺序排列 */
+    margin:0 20px;
+}
+.nav li a {  /* 因为文本是在a里,所以是.nav li a ,写ul li a也可，只是ul权限没有.nav高*/
+	text-decoration: none; /* 取消下划线  li里面没有文字，只有a元素，若只写到li，则该条代码无效*/
+	color: #333;   /* li里面没有文字，只有a元素，若只写到li，则该条代码无效 */
+}
+ .nav li a:hover{  /* 只写a:hover,权限不及上方代码 */
+	color: deepskyblue;
+}
+/* banner开始 */
+.banner {
+	height: 620px;
+	background: url(../img/banner.jpg) no-repeat top center;     /* ../返回上级菜单   no-repeat是平铺，top意为上面为0，center是居中*/
+}
+/* banner结束 */
+
+/*service开始*/
+.service {
+	height: 660px;
+	width: 1055px;
+	background-color: #fafafa;
+	margin:75px auto 0;  
+}
+.service-hd {
+	margin:0 20px;  
+border-top:1px solid #000;
+}
+.service-hd h3 {
+	width: 162px;
+	height: 44px;
+	margin:-20px auto 0;
+}
+.service-hd p {
+	font-size: 12px;
+	line-height: 26px;
+	text-align: center;
+	width: 830px;  /*如果没有加设宽度段落的文字就会是通栏,就无法居中对齐*/
+	margin: 20px auto 0;
+}
